@@ -11,6 +11,7 @@ public class mainsystem : MonoBehaviour
 
     GameObject Move_button;
     GameObject My_king;
+    GameObject King_R;
     GameObject pawn;
     GameObject Hero;
 
@@ -20,7 +21,7 @@ public class mainsystem : MonoBehaviour
         pawn = Units[1];
         Hero = Units[2];
 
-        GameObject King_R = Instantiate(My_king, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        King_R = Instantiate(My_king, new Vector3(0f, 0f, 0f), Quaternion.identity);
         /*in this line have to spwan some pawns in board but now i have to testing about how to make main system of king the main unit,
          so we have to add more unit but consider about hero spawn system it will be diffrent any other units*/
     }
@@ -44,12 +45,18 @@ public class mainsystem : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))//0 is left click 1 is right click 2 is mouse button 3
         {
-            Collider2D col;
-
+            Collider2D colider_name = King_R.GetComponent<Collider2D>();
+            
+            Debug.Log(colider_name.gameObject.name);
             Debug.Log(hit.collider);
-            if (hit.collider != null)
-            {
 
+            if (colider_name.gameObject.name.Equals(hit.collider))
+            {
+                Debug.Log("you made it");
+            }
+            else
+            {
+                Debug.Log(".");
             }
         }
     }

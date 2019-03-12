@@ -90,7 +90,7 @@ public class UnitStatus : MonoBehaviour
         }
         
 
-        Debug.Log(King_vector.y - s_position[1]);
+        //Debug.Log(King_vector.y - s_position[1]);
         Health_bar_R.transform.position = new Vector3(King_vector.x, King_vector.y + 1.27f, 0f);
         Health.transform.position = new Vector3 ( King_vector.x - s_position.x , King_vector.y - s_position.y + 2.54f);
 
