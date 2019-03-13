@@ -13,6 +13,8 @@ public class UnitStatus : MonoBehaviour
     public int movement;
     public int movement_mode;
     public int hand_limit;
+    public int piece_no;
+    public int clicked; // if this unit clicked 1 or not 0
     public GameObject[] stat_ui_list;
 
     private int render_int;

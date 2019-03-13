@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\KingTesty.cs" />
     <Compile Include="Assets\Scripts\mainsystem.cs" />
+    <Compile Include="Assets\Scripts\Unit_Bdhavior.cs" />
     <Compile Include="Assets\Scripts\UnitStatus.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/unity/Skill_chess/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
