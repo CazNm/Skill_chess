@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7094428202482083585}
   - component: {fileID: 7094428202482083587}
   - component: {fileID: 3734890516637250267}
+  - component: {fileID: 7826154317360086410}
   - component: {fileID: 7773034130036112648}
   m_Layer: 0
   m_Name: My_king
@@ -102,11 +103,14 @@ MonoBehaviour:
   movement: 0
   movement_mode: 0
   hand_limit: 0
+  piece_no: 0
+  clicked: 0
   stat_ui_list:
   - {fileID: 7980185619409990632, guid: 59fa4d17edede2040aa4538c2e454ffc, type: 3}
   - {fileID: 8231433126082534693, guid: bd60cc5e1053a534a85289ade99880fd, type: 3}
   - {fileID: 0}
   - {fileID: 0}
+  unitpos: {x: 0, y: 0}
 --- !u!114 &3734890516637250267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +121,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc8cbc786b74d57439ac2cc11596a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7826154317360086410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7094428202482083614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0850c6a2abec9ea448e5897161504483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &7773034130036112648
@@ -132,7 +148,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4704056, y: -1.036422}
+  m_Offset: {x: 0, y: -0.9}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
