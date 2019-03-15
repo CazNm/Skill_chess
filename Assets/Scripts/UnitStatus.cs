@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitStatus : MonoBehaviour
 {
-
+    
     public int M_health;
     public int C_health;
     public int C_shield;
@@ -16,6 +17,7 @@ public class UnitStatus : MonoBehaviour
     public int piece_no;
     public int clicked; // if this unit clicked 1 or not 0
     public GameObject[] stat_ui_list;
+    public Vector2 unitpos;
 
     private int render_int;
     private float test_position;
@@ -23,7 +25,7 @@ public class UnitStatus : MonoBehaviour
     Transform King_position;
 
     Vector3 s_position;
-    Vector2 King_vector;
+    public Vector2 King_vector;
     
     GameObject Health_bar;
     GameObject Health_bar_R;
@@ -45,6 +47,8 @@ public class UnitStatus : MonoBehaviour
 
         Health_bar = stat_ui_list[0];
         Health_contents = stat_ui_list[1];
+
+        unitpos = Camera.main.WorldToScreenPoint(GetComponent<Transform>().position);
 
 
     }
@@ -68,9 +72,11 @@ public class UnitStatus : MonoBehaviour
 
     void FixedUpdate()
     {
-        King_vector = new Vector2 (0f, 0f);
-        
+
+        King_vector = GetComponent<boardpos>().board_world_pos[4,0];
+        unitpos = Camera.main.WorldToScreenPoint(GetComponent<Transform>().position);
         transform.position = new Vector3(King_vector.x, King_vector.y, 0f);
+
         if (render_int == 0)
         {
             Health_bar_R = Instantiate(Health_bar, new Vector3(King_vector.x, King_vector.y + 1.27f, 0f), Quaternion.identity);
@@ -96,7 +102,7 @@ public class UnitStatus : MonoBehaviour
         Health_bar_R.transform.position = new Vector3(King_vector.x, King_vector.y + 1.27f, 0f);
         Health.transform.position = new Vector3 ( King_vector.x - s_position.x , King_vector.y - s_position.y + 2.54f);
 
-
+       
         //test_position += 0.001f;
         
     }
