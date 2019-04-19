@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class mainsystem : MonoBehaviour
@@ -25,8 +26,7 @@ public class mainsystem : MonoBehaviour
 
     Button attack;
     Button move;
-
-    
+    public UnityAction call;
 
     void Start()
     {
@@ -51,6 +51,7 @@ public class mainsystem : MonoBehaviour
     private void Update() 
     {
         select_unit();
+        //attack.onClick.AddListener(call);
     }
 
     //고정 프레임, 랜더링하는 프레임과는 차이가 있으므로 게임상으로 클릭하는 것과 같은 
@@ -119,7 +120,8 @@ public class mainsystem : MonoBehaviour
             move_order = Instantiate(MainSystem_Ui[1], new Vector3(unit_position.x, unit_position.y + 120.0f, 0f), Quaternion.identity);
             move_order.transform.SetParent(GameObject.Find("Canvas").transform);
 
-            attack_order.GetComponent<Button>().onClick.;
+            //attack = attack_order.GetComponent<Button>();
+            //move = move_order.GetComponent<Button>();
         }
         else
         {

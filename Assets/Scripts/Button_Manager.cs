@@ -1,25 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class KingTesty : MonoBehaviour
+public class Button_Manager : MonoBehaviour
 {
-
-    int health;
-    int attack;
-    int deffend;
-    int handlimit;
-    int movement;
-    Vector2 position;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<GameObject>().SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    void Button_Image_add()
     {
         
     }
