@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 6ed2b6f542cbc4d248b4c47f7b9f54cb
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 9
+=======
+guid: 3c592a4d3e1c41a498d89d01551ce683
+TextureImporter:
+  fileIDToRecycleName: {}
+  externalObjects: {}
+  serializedVersion: 7
+>>>>>>> Stashed changes
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -75,7 +83,11 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< Updated upstream
     spriteID: 57d245cdef6064135bb06d2cf88b3276
+=======
+    spriteID: e515e4c9aebfcb740915616ec92aecce
+>>>>>>> Stashed changes
     vertices: []
     indices: 
     edges: []

@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\mainsystem.cs" />
     <Compile Include="Assets\Scripts\Unit_Bdhavior.cs" />
     <Compile Include="Assets\Scripts\UnitStatus.cs" />
+<<<<<<< Updated upstream
     <None Include="Assets\Sprites\sketch\킹구상\모든킹\H_G.txt" />
     <None Include="Assets\Sprites\sketch\킹구상\P_tjdghksEL\H_o.txt" />
     <None Include="Assets\Sprites\sketch\King_proto_ICE\protoice.txt" />
@@ -84,6 +85,27 @@
     <None Include="Assets\Sprites\sketch\킹구상\P_z\K_Code_Z.txt" />
     <None Include="Assets\Sprites\sketch\킹구상\P_tjdghksEL\H_G.txt" />
     <None Include="Assets\Sprites\sketch\스크립팅.txt" />
+=======
+    <None Include="Assets\Sprites\sketch\킹구상\모든킹\K_Code_Z.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\모든킹\H_b.txt" />
+    <None Include="Assets\Sprites\sketch\원본&amp;개발과정\스킬체스.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\P_knight\K_knight.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\P_z\K_Code_Z.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\모든킹\K_knight.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\P_ice\protoice.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\모든킹\K_gay.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\모든킹\H_o.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\P_tjdghksEL\H_o.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\모든킹\H_G.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\P_tjdghksEL\H_b.txt" />
+    <None Include="Assets\Sprites\sketch\스크립팅.txt" />
+    <None Include="Assets\Sprites\sketch\King_proto_ICE\protoice.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\P_tjdghksEL\K_gemsculptor.txt" />
+    <None Include="Assets\Sprites\sketch\rule &amp; words.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\P_tjdghksEL\H_G.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\새 텍스트 문서.txt" />
+    <None Include="Assets\Sprites\sketch\킹구상\모든킹\protoice.txt" />
+>>>>>>> Stashed changes
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/caznm/unity/Skill_chess/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
