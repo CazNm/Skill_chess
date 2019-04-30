@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ord_button
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
     locked: 0
   - name: board
     uniqueID: 1856412157
+    locked: 0
+  - name: board_sel
+    uniqueID: 3332489049
     locked: 0
   - name: unit
     uniqueID: 3077444565

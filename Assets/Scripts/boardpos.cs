@@ -5,7 +5,8 @@ using UnityEngine;
 public class boardpos : MonoBehaviour
 {
 
-    public Vector2[ , ] board_world_pos = new Vector2 [5,5];
+    public Vector2[,] board_world_pos = new Vector2 [5,5];
+    public Vector3[,] board_screen_pos = new Vector3[5,5];
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class boardpos : MonoBehaviour
             for(int x = 0; x < 5; x++)
             {
                 board_world_pos[x, y] = new Vector2(-5.75f + (x * 2.90f), 5.15f - (y * 2.20f));
+                board_screen_pos[x, y] = Camera.main.WorldToScreenPoint(new Vector3(board_world_pos[x, y].x, board_world_pos[x, y].y, 0.0f));
             }
         }
 
