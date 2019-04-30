@@ -10,7 +10,7 @@ public class mainsystem : MonoBehaviour
     public GameObject[] MainSystem_Ui;
     public GameObject[] Units;
     public GameObject[] EnemyUnits;
-    public GameObject[] myBoard_unit = new GameObject[20]; // this list is to management my pieces in board.
+    public GameObject[] p1_pawns = new GameObject[20]; // this list is to management my pieces in board.
 
     private int my_turn; // if my turn then this int will be 0, oppenent turn this will be 1
     private int unit_clicked;
@@ -35,7 +35,8 @@ public class mainsystem : MonoBehaviour
         Hero = Units[2];
 
         King_R = Instantiate(My_king, new Vector3(0f, 0f, 0f), Quaternion.identity);
-        myBoard_unit[0] = King_R;
+      
+        
 
         unit_clicked = 0;
         
@@ -67,7 +68,7 @@ public class mainsystem : MonoBehaviour
     {
         for(int x = 0; x < 20; x++)
         {
-            myBoard_unit[x].GetComponent<UnitStatus>().piece_no = x;
+            p1_pawns[x].GetComponent<UnitStatus>().piece_no = x;
         }
         
     }
@@ -95,14 +96,12 @@ public class mainsystem : MonoBehaviour
                 Debug.Log("no pieces");
                 for (int x = 0; x < 20; x++)
                 {
-                    if (myBoard_unit[x] == null)
+                    if (p1_pawns[x] == null)
                     {
                         continue;
                     }
-                    myBoard_unit[x].GetComponent<UnitStatus>().clicked = 0;
-                    //Destroy(attack_order, 0f);
-                    //Destroy(move_order, 0f);
-                    unit_clicked = 1;
+                    p1_pawns[x].GetComponent<UnitStatus>().clicked = 0;            
+                    unit_clicked = 0;
                     
 
                 }
@@ -114,10 +113,10 @@ public class mainsystem : MonoBehaviour
     {
         if (clicked_unit == 0)
         {
-            attack_order = Instantiate(MainSystem_Ui[0], new Vector3(unit_position.x, unit_position.y + 50.0f, 0f), Quaternion.identity);
+            attack_order = Instantiate(MainSystem_Ui[0], new Vector3(unit_position.x + 120.0f, unit_position.y + 50.0f, 0f), Quaternion.identity);
             attack_order.transform.SetParent(GameObject.Find("Canvas").transform);
 
-            move_order = Instantiate(MainSystem_Ui[1], new Vector3(unit_position.x, unit_position.y + 120.0f, 0f), Quaternion.identity);
+            move_order = Instantiate(MainSystem_Ui[1], new Vector3(unit_position.x + 120.0f, unit_position.y + 100.0f, 0f), Quaternion.identity);
             move_order.transform.SetParent(GameObject.Find("Canvas").transform);
 
             //attack = attack_order.GetComponent<Button>();

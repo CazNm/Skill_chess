@@ -22,7 +22,7 @@ public class UnitStatus : MonoBehaviour
     private int render_int;
     private float test_position;
     private Transform Health;
-    Transform King_position;
+    Vector3 King_position;
 
     Vector3 s_position;
     public Vector2 King_vector;
@@ -31,14 +31,15 @@ public class UnitStatus : MonoBehaviour
     GameObject Health_bar_R;
     GameObject Health_contents;
     GameObject Health_contents_R;
-
+    
     // Start is called before the first frame update
     void Start()
     {
         //We have to input data that in deck which player selected, But we have to make interface first so this time use inspector input data
 
-        King_position = transform;
-        King_vector = King_position.position;
+        King_position = GetComponent<Transform>().position;
+        King_position = GameObject.Find("board_manager").GetComponent<boardpos>().board_world_pos[0,4];
+        King_vector = King_position;
         test_position = 0;
 
         s_position = new Vector3 (0f, 0f, 0f);
